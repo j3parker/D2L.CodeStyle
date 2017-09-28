@@ -23,6 +23,7 @@ namespace D2L.CodeStyle.Analyzers.Immutability {
 				ctx => AnalyzeClass( ctx, inspector ),
 				SyntaxKind.ClassDeclaration
 			);
+
 		}
 
 		private void AnalyzeClass( SyntaxNodeAnalysisContext context, MutabilityInspector inspector ) {

@@ -42,11 +42,37 @@
     <Compile Include="Contract\NotNullAnalyzer.cs" />
     <Compile Include="Extensions\Microsoft.CodeAnalysis.CSharp.cs" />
     <Compile Include="Immutability\ImmutabilityAnalyzer.cs" />
+    <Compile Include="Mutability\Goals\ClassGoal.cs" />
+    <Compile Include="Mutability\Goals\ConcreteTypeGoal.cs" />
+    <Compile Include="Mutability\Goals\FieldGoal.cs" />
+    <Compile Include="Mutability\Goals\GenericTypeParameterGoal.cs" />
+    <Compile Include="Mutability\Goals\InitializerGoal.cs" />
+    <Compile Include="Mutability\Goals\Goal.cs" />
+    <Compile Include="Mutability\Goals\PropertyObligation.cs" />
+    <Compile Include="Mutability\Goals\StructObligation.cs" />
+    <Compile Include="Mutability\Goals\SubTypesGoal.cs" />
+    <Compile Include="Mutability\Inspector.cs" />
+    <Compile Include="Mutability\Rules\BaseTypeRule.cs" />
+    <Compile Include="Mutability\Rules\ConcreteTypeTactics.cs" />
+    <Compile Include="Mutability\Rules\ClassAndStructReducers.cs" />
+    <Compile Include="Mutability\Rules\FieldReducer.cs" />
+    <Compile Include="Mutability\Rules\DefaultPropertyTactic.cs" />
+    <Compile Include="Mutability\Rules\InitializerReducers.cs" />
+    <Compile Include="Mutability\Rules\SubTypesRule.cs" />
+    <Compile Include="Mutability\Rules\Utility\AnnotatedImmutableTactic.cs" />
+    <Compile Include="Mutability\Rules\Utility\CachingMetaTactic.cs" />
+    <Compile Include="Mutability\Rules\Utility\CompositeReducer.cs" />
+    <Compile Include="Mutability\Rules\Utility\ContainerTypeTactic.cs" />
+    <Compile Include="Mutability\Rules\Utility\CycleDetectingMetaTactic.cs" />
+    <Compile Include="Mutability\Rules\Utility\KnownExternalTypesTactic.cs" />
+    <Compile Include="Mutability\Rules\Utility\SequencedReducer.cs" />
+    <Compile Include="Mutability\SourceOfMutability.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RpcDependencies\RpcDependencyAnalyzer.cs" />
     <Compile Include="ServiceLocator\OldAndBrokenServiceLocatorAnalyzer.cs" />
     <Compile Include="UnsafeSingletons\UnsafeSingletonsAnalyzer.cs" />
     <Compile Include="UnsafeStatics\UnsafeStaticsAnalyzer.cs" />
+    <Compile Include="Mutability\Goals\TypeGoal.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="D2L.CodeStyle.Analyzers.nuspec">
@@ -94,6 +120,7 @@
       <HintPath>..\..\packages\Microsoft.CodeAnalysis.Workspaces.Common.1.2.0\lib\net45\Microsoft.CodeAnalysis.Workspaces.Desktop.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Collections.Immutable, Version=1.1.37.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\..\packages\System.Collections.Immutable.1.1.37\lib\dotnet\System.Collections.Immutable.dll</HintPath>
@@ -124,6 +151,7 @@
       <Private>True</Private>
     </Reference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

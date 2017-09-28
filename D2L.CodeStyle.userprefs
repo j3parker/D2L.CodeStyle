@@ -1,0 +1,67 @@
+﻿<Properties StartupConfiguration="{1C54E78A-E12B-45C3-BA6E-31DB5C63B389}|Unit Tests">
+  <MonoDevelop.Ide.Workbench ActiveDocument="src/D2L.CodeStyle.Analyzers/Mutability/Reduction/Utility/CompositeReducer.cs">
+    <Files>
+      <File FileName="tests/D2L.CodeStyle.Analyzers.UnitTests/Mutability/Reducers/FieldReducerTests.cs" Line="12" Column="1" />
+      <File FileName="tests/D2L.CodeStyle.Analyzers.UnitTests/Mutability/Reducers/Context.cs" Line="47" Column="2" />
+      <File FileName="src/D2L.CodeStyle.Analyzers/Mutability/Reduction/FieldReducer.cs" Line="44" Column="41" />
+      <File FileName="src/D2L.CodeStyle.Analyzers/Mutability/Goals/TypeGoal.cs" Line="5" Column="23" />
+      <File FileName="src/D2L.CodeStyle.Analyzers/Mutability/Reduction/BaseTypeReducers.cs" Line="53" Column="5" />
+      <File FileName="src/D2L.CodeStyle.Analyzers/Mutability/Reduction/AnnotatedImmutableTactic.cs" Line="9" Column="4" />
+      <File FileName="src/D2L.CodeStyle.Analyzers/Mutability/Reduction/CompositeReducer.cs" Line="4" Column="1" />
+      <File FileName="src/D2L.CodeStyle.Analyzers/Mutability/Reduction/ContainerTypeTactic.cs" Line="13" Column="7" />
+      <File FileName="src/D2L.CodeStyle.Analyzers/Mutability/Reduction/KnownExternalTypesTactic.cs" Line="7" Column="54" />
+      <File FileName="src/D2L.CodeStyle.Analyzers/Mutability/Reduction/CycleDetectingMetaTactic.cs" Line="18" Column="45" />
+      <File FileName="src/D2L.CodeStyle.Analyzers/Mutability/Reduction/InitializerReducers.cs" Line="20" Column="5" />
+      <File FileName="src/D2L.CodeStyle.Analyzers/Mutability/Reduction/DefaultPropertyTactic.cs" Line="46" Column="34" />
+      <File FileName="src/D2L.CodeStyle.Analyzers/Mutability/Reduction/ConcreteTypeTactics.cs" Line="22" Column="6" />
+      <File FileName="src/D2L.CodeStyle.Analyzers/Mutability/Goals/ClassGoal.cs" Line="12" Column="1" />
+      <File FileName="src/D2L.CodeStyle.Analyzers/Mutability/Reduction/ClassAndStructReducers.cs" Line="9" Column="39" />
+      <File FileName="src/D2L.CodeStyle.Analyzers/Mutability/Reduction/Utility/CompositeReducer.cs" Line="7" Column="45" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="D2L.CodeStyle" expanded="True">
+            <Node name="Test" expanded="True">
+              <Node name="D2L.CodeStyle.Analyzers.UnitTests" expanded="True">
+                <Node name="References" expanded="True" />
+                <Node name="Mutability" expanded="True">
+                  <Node name="Reducers" expanded="True" />
+                </Node>
+              </Node>
+            </Node>
+            <Node name="D2L.CodeStyle.Analyzers" expanded="True">
+              <Node name="Mutability" expanded="True">
+                <Node name="Reduction" expanded="True">
+                  <Node name="Utility" expanded="True">
+                    <Node name="CompositeReducer.cs" selected="True" />
+                  </Node>
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="ClassPad">
+        <State name="__root__">
+          <Node name="D2L.CodeStyle" expanded="True" selected="True" />
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+      <Pad Id="MonoDevelop.UnitTesting.TestPad">
+        <State name="__root__">
+          <Node name="D2L.CodeStyle" expanded="True" selected="True" />
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.Test.D2L.CodeStyle.Analyzers.Tests PreferredExecutionTarget="MonoDevelop.Default" />
+</Properties>
