@@ -12,7 +12,6 @@ namespace D2L.CodeStyle.Analyzers.Common {
 	public enum MutabilityInspectionFlags {
 		Default = 0,
 		AllowUnsealed = 1,
-		IgnoreImmutabilityAttribute = 2,
 	}
 
 	internal sealed class MutabilityInspector {
@@ -94,8 +93,14 @@ namespace D2L.CodeStyle.Analyzers.Common {
 					+ "are referenced, including transitive dependencies." );
 			}
 
-			// If we're verifying immutability, then carry on; otherwise, bailout
-			if( !flags.HasFlag( MutabilityInspectionFlags.IgnoreImmutabilityAttribute ) && IsTypeMarkedImmutable( type ) ) {
+			// Types annotated with [Immutable] that come from another assembly
+			// are assumed to be safe.
+			// We assume every assembly with [Immutable] types has our analyzer
+			// running. IsTypeMarkedImmutable handles some extra cases where
+			// we can't actually add the annotation (e.g. system libraries.)
+			// This works out because every assembly that defines an
+			// [Immutable] type has these checked while that assembly builds.
+			if( TypeIsFromOtherAssembly( type ) && IsTypeMarkedImmutable( type ) ) {
 				return MutabilityInspectionResult.NotMutable();
 			}
 
